@@ -7,12 +7,12 @@ const mouseOver = () => console.log("Mouse Over")
 
 const helpText = "Help Text!"
 
-function Header() {
+const Header = () => {
   return (
   <header>The Header</header>)
 }
 
-function App() {
+const App = () => {
   return (<div className="name">
     <Header />
     <h1>{helpText}</h1>
