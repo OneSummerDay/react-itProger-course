@@ -7,13 +7,21 @@ const mouseOver = () => console.log("Mouse Over")
 
 const helpText = "Help Text!"
 
-const elements = (<div className="name">
-  <h1>{helpText}</h1>
-  <input placeholder={helpText}
-    onClick={inputClick} onMouseEnter={mouseOver}/>
-  <p>{helpText === "Help Text!" ? "Yes" : "No"}</p>
-</div>)
+function Header() {
+  return (
+  <header>The Header</header>)
+}
 
-const app = ReactDOMClient.createRoot(document.getElementById("App"))
+function App() {
+  return (<div className="name">
+    <Header />
+    <h1>{helpText}</h1>
+    <input placeholder={helpText}
+      onClick={inputClick} onMouseEnter={mouseOver}/>
+    <p>{helpText === "Help Text!" ? "Yes" : "No"}</p>
+  </div>)
+}
 
-app.render(elements)
+const app = ReactDOMClient.createRoot(document.getElementById("app"))
+
+app.render(<App />)
