@@ -1,5 +1,5 @@
 import React from "react"
-import  ReactDOM  from "react-dom"
+import  *  as ReactDOMClient from "react-dom/client"
 
 
 const inputClick = () => console.log("Clicked")
@@ -14,6 +14,6 @@ const elements = (<div className="name">
   <p>{helpText === "Help Text!" ? "Yes" : "No"}</p>
 </div>)
 
-const app = document.getElementById("App")
+const app = ReactDOMClient.createRoot(document.getElementById("App"))
 
-ReactDOM.render(elements, app)
+app.render(elements)
