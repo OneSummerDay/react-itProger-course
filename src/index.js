@@ -7,9 +7,12 @@ const mouseOver = () => console.log("Mouse Over")
 
 const helpText = "Help Text!"
 
-const Header = () => {
-  return (
-  <header>The Header</header>)
+class Header extends React.Component {
+  render() {
+    return (
+      <header>The Header</header>
+    )
+  }
 }
 
 const App = () => {
